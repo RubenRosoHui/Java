@@ -9,8 +9,29 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.strobertschs.finalprokect.finalproject.MainActivity">
 
-    <TextView
+    <Button
+        android:text="Play"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/buttonPlay" />
+
+    <Button
+        android:text="quit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:id="@+id/buttonQuit"
+        android:layout_below="@+id/buttonLinks"
+        android:layout_alignStart="@+id/buttonLinks" />
+
+    <Button
+        android:text="links"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:id="@+id/buttonLinks"
+        android:layout_below="@+id/buttonPlay"
+        android:layout_alignStart="@+id/buttonPlay" />
 </RelativeLayout>

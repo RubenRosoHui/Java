@@ -3,7 +3,6 @@ package com.strobertschs.finalprokect.finalproject;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.strobertschs.finalprokect.finalproject.R;
 
 public class GameActivity extends AppCompatActivity {
 
