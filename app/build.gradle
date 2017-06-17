@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 apply plugin: 'com.android.application'
 
 android {
@@ -25,7 +25,7 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:25.3.1'
 }
-=======
+
 apply plugin: 'com.android.application'
 
 android {
@@ -52,4 +52,3 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:25.3.1'
 }
->>>>>>> 1dd2da0cf2967e2fb65f4da3e175f720b4174264
