@@ -19,4 +19,5 @@ public class GameActivity extends AppCompatActivity {
         Resources res = getResources();
         bitmap = BitmapFactory.decodeResource(res, cntower2);
     }
+
 }
