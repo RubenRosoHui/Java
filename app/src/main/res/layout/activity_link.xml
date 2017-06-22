@@ -11,4 +11,38 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.strobertschs.finalprokect.finalproject.GameActivity">
 
+    <Button
+        android:text="6 ways to help keep water clean"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/findOutMore"
+        android:onClick="sixWays"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="233dp"
+        android:layout_alignEnd="@+id/button2"
+        android:layout_alignStart="@+id/button2" />
+
+    <TextView
+        android:text="For more info click button below"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:textAlignment="center"
+        android:fontFamily="sans-serif"
+        android:textSize="50sp"
+        android:textStyle="normal|bold"
+        tools:textColor="@android:color/black"
+        android:layout_marginTop="22dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="how to keep waste oil out of water supply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="73dp"
+        android:id="@+id/button2"
+        android:onClick="wasteOil"
+        android:layout_alignTop="@+id/findOutMore"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

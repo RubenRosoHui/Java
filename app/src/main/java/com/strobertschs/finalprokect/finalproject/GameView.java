@@ -22,6 +22,7 @@ import static android.R.attr.x;
 import static android.R.attr.y;
 import static com.strobertschs.finalprokect.finalproject.R.attr.height;
 import static com.strobertschs.finalprokect.finalproject.R.drawable.cntower2;
+import static com.strobertschs.finalprokect.finalproject.R.drawable.pausebutton;
 
 /**
  * Created by Santiago Neymar Jr on 18/06/2017.
@@ -38,7 +39,7 @@ class GameView extends SurfaceView implements Runnable{
     // the background image
     protected ArrayList<Bitmap> objectImages; // list of object images
     //    private int numObjects;
-//    private Random random;
+    //    private Random random;
     int screenWidth, screenHeight; // screen dimensions
     volatile boolean playingGame; // is the game running?
     Thread ourThread = null;
@@ -61,6 +62,8 @@ class GameView extends SurfaceView implements Runnable{
 
         Resources res = getResources();
 
+
+
         objectImages = new ArrayList<Bitmap>();
         objectImages.add(Bitmap.createScaledBitmap(BitmapFactory.decodeResource(res,
                 R.drawable.beer),objectSize, objectSize, false));
@@ -72,6 +75,7 @@ class GameView extends SurfaceView implements Runnable{
                 R.drawable.sixpackrings),objectSize, objectSize, false));
         objectImages.add(Bitmap.createScaledBitmap(BitmapFactory.decodeResource(res,
                 R.drawable.waterbottlenestle),objectSize, objectSize, false));
+
         // all object images are stored in this list and scaled to the same size
 
  /*       objectImages.add(BitmapFactory.decodeResource(res,

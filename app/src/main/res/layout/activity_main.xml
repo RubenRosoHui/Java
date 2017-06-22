@@ -30,7 +30,7 @@
         android:layout_alignStart="@+id/buttonLinks" />
 
     <Button
-        android:text="links"
+        android:text="more info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="19dp"
