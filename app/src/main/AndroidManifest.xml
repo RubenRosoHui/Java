@@ -17,7 +17,8 @@
         </activity>
         <activity android:name=".GameActivity" />
         <activity android:name=".ObjectsActivity" />
-        <activity android:name="com.strobertschs.finalproject.finalproject.LinkActivity"></activity>
+        <activity android:name="com.strobertschs.finalproject.finalproject.LinkActivity" />
+        <activity android:name=".LinkActivity"></activity>
     </application>
 
 </manifest>
