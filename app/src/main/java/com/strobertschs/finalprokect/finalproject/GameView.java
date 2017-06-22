@@ -8,6 +8,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.PorterDuff;
+import android.graphics.Rect;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
@@ -15,13 +16,26 @@ import android.view.SurfaceView;
 import java.util.ArrayList;
 import java.lang.Math;
 
+import static android.R.attr.bitmap;
+import static android.R.attr.width;
+import static android.R.attr.x;
+import static android.R.attr.y;
+import static com.strobertschs.finalprokect.finalproject.R.attr.height;
+import static com.strobertschs.finalprokect.finalproject.R.drawable.cntower2;
+
 /**
  * Created by Santiago Neymar Jr on 18/06/2017.
  */
 
+
+
 class GameView extends SurfaceView implements Runnable{
+
+
+
     private Objects object; // the object; there's only 1, but it can change image and position to appear as many different objects
-    private Bitmap tower; // the background image
+    private Bitmap tower;
+    // the background image
     protected ArrayList<Bitmap> objectImages; // list of object images
     //    private int numObjects;
 //    private Random random;
@@ -72,12 +86,13 @@ class GameView extends SurfaceView implements Runnable{
                 R.drawable.waterbottlenestle));
 */ //       numObjects = objectImages.size();
 
-        tower = BitmapFactory.decodeResource(res, R.drawable.cntower2);
+        tower = BitmapFactory.decodeResource(res, cntower2);
+
         water = new Water(Bitmap.createScaledBitmap(BitmapFactory.decodeResource(res,
                 R.drawable.water),screenWidth, waterHeight, false),
                 screenHeight, waterHeight);
         // to make the image the same size as the screen, change this to new Water
-        // (Bitmap.createScaledBitmap(BitmapFactory.decodeResource(res, R.drawable.water),screenWidth, screenHeight, false), screenHeight, waterHeight)
+        //(Bitmap.createScaledBitmap(BitmapFactory.decodeResource(res, R.drawable.water),screenWidth, screenHeight, false), screenHeight, waterHeight)
 
         object = new Objects(objectImages, water.getHeight(), screenWidth, screenHeight);
 
