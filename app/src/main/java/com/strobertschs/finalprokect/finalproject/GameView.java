@@ -26,6 +26,7 @@ import static com.strobertschs.finalprokect.finalproject.R.drawable.ice;
 import static com.strobertschs.finalprokect.finalproject.R.drawable.ice2;
 import static com.strobertschs.finalprokect.finalproject.R.drawable.ice3;
 import static com.strobertschs.finalprokect.finalproject.R.drawable.ice4;
+import static com.strobertschs.finalprokect.finalproject.R.drawable.ice5;
 import static com.strobertschs.finalprokect.finalproject.R.drawable.northpole;
 import static com.strobertschs.finalprokect.finalproject.R.drawable.pausebutton;
 
@@ -101,7 +102,7 @@ class GameView extends SurfaceView implements Runnable{
 */ //       numObjects = objectImages.size();
 
         res = getResources();
-        bitmap = BitmapFactory.decodeResource(res, ice4);
+        bitmap = BitmapFactory.decodeResource(res, ice5);
 
 
         water = new Water(Bitmap.createScaledBitmap(BitmapFactory.decodeResource(res,
