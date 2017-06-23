@@ -1,3 +1,3 @@
-# ICS4U Final Project - NAME OF YOUR GAME
+# ICS4U Final Project - Water Levels
 
 Add all instructions for operating your game here.
