@@ -51,6 +51,7 @@ class GameView extends SurfaceView implements Runnable{
     Water water; // the water
     int waterHeight = 100; // starting water height
     int objectSize; // size of objects; this is used to make all object images the same size
+    int points; //points counter for when the item is tapped
 
     public GameView(Context context, int sScreenWidth, int sScreenHeight){
         super(context);
@@ -134,6 +135,7 @@ class GameView extends SurfaceView implements Runnable{
             object.nextBitmap();
             object.setNewPosition(water.getHeight());
             object.setTouched(false);
+            points++;
         }else{
             // if the object was not touched, increase water level
             water.increaseWater();
@@ -146,6 +148,8 @@ class GameView extends SurfaceView implements Runnable{
             canvas.drawColor(0, PorterDuff.Mode.CLEAR); // clear the previous canvas before drawing new
             canvas.drawBitmap(tower,(screenWidth - tower.getWidth())/2,0, null);
             paint.setColor(Color.argb(255, 255, 255, 255));
+            paint.setTextSize(45);
+            canvas.drawText("Points: " +points, 20, 50, paint);
             water.draw(canvas);
             object.draw(canvas);
             ourHolder.unlockCanvasAndPost(canvas);
