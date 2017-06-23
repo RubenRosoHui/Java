@@ -99,7 +99,7 @@ class GameView extends SurfaceView implements Runnable{
         tower = BitmapFactory.decodeResource(res, cntower2);
 
         water = new Water(Bitmap.createScaledBitmap(BitmapFactory.decodeResource(res,
-                R.drawable.water),screenWidth, waterHeight, false),
+                R.drawable.water),screenWidth, screenHeight, false),
                 screenHeight, waterHeight);
         // to make the image the same size as the screen, change this to new Water
         //(Bitmap.createScaledBitmap(BitmapFactory.decodeResource(res, R.drawable.water),screenWidth, screenHeight, false), screenHeight, waterHeight)
@@ -131,15 +131,15 @@ class GameView extends SurfaceView implements Runnable{
         lastFrameTime = System.currentTimeMillis();
     }
 
-    public void updateGame(){
-        if(object.isTouched()) {
+    public void updateGame() {
+        if (object.isTouched()) {
             // if the object was touched, then decrease the water level, move the object, change its image and reset the touched variable
             water.decreaseHitWater();
             object.nextBitmap();
             object.setNewPosition(water.getHeight());
             object.setTouched(false);
             points++;
-        }else{
+        } else {
             // if the object was not touched, increase water level
             water.increaseWater();
         }
@@ -154,13 +154,6 @@ class GameView extends SurfaceView implements Runnable{
         //Increases the Water Level by 5 Increments every 150 Points
         if (points % 150 == 0) {
             for (int i = 0; i < 10; i++) {
-                water.increaseWater();
-            }
-        }
-
-        //Increases the Water Level by 5 Increments every 10 seconds
-        if (time % 10000 == 0) {
-            for (int i = 0; i < 5; i++) {
                 water.increaseWater();
             }
         }
@@ -186,7 +179,6 @@ class GameView extends SurfaceView implements Runnable{
             updateGame();
             drawGame();
             controlFPS();
-            time++;
         }
 
     }
