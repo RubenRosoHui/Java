@@ -51,8 +51,7 @@ class GameView extends SurfaceView implements Runnable{
     Water water; // the water
     int waterHeight = 100; // starting water height
     int objectSize; // size of objects; this is used to make all object images the same size
-    int points; //points counter for when the item is tapped
-    int time; //checks the amount of milliseconds since the game started
+    int points = 1; //points counter for when the item is tapped
 
 
     public GameView(Context context, int sScreenWidth, int sScreenHeight){
@@ -97,6 +96,7 @@ class GameView extends SurfaceView implements Runnable{
 */ //       numObjects = objectImages.size();
 
         tower = BitmapFactory.decodeResource(res, cntower2);
+
 
         water = new Water(Bitmap.createScaledBitmap(BitmapFactory.decodeResource(res,
                 R.drawable.water),screenWidth, screenHeight, false),
