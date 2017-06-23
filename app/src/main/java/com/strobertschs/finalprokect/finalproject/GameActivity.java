@@ -45,8 +45,6 @@ public class GameActivity extends AppCompatActivity {
         }
         finish();
     }
-
-
     @Override
     protected void onPause() {
         super.onPause();

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 public class LinkActivity extends AppCompatActivity {
@@ -15,10 +16,12 @@ public class LinkActivity extends AppCompatActivity {
     }
     public void sixWays (View view) {
         goToUrl ( "https://www.nrdc.org/stories/6-ways-you-can-help-keep-our-water-clean/");
+        Log.i("info", "The user opened the first link");
     }
 
     public void wasteOil (View view) {
         goToUrl ( "https://www.scientificamerican.com/article/how-to-keep-waste-oil-out/");
+        Log.i("info", "The user opened the second link");
     }
 
     private void goToUrl (String url) {
