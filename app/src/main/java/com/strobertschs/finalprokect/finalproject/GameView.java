@@ -142,6 +142,27 @@ class GameView extends SurfaceView implements Runnable{
             // if the object was not touched, increase water level
             water.increaseWater();
         }
+
+        //Increases the Water Level by 3 Increments every 60 Points
+        if (points % 60 == 0) {
+            for (int i = 0; i < 5; i++) {
+                water.increaseWater();
+            }
+        }
+
+        //Increases the Water Level by 5 Increments every 150 Points
+        if (points % 150 == 0) {
+            for (int i = 0; i < 10; i++) {
+                water.increaseWater();
+            }
+        }
+
+        //Increases the Water Level by 5 Increments every 10 seconds
+        if (time % 10000 == 0) {
+            for (int i = 0; i < 5; i++) {
+                water.increaseWater();
+            }
+        }
     }
 
     public void drawGame(){
@@ -164,6 +185,7 @@ class GameView extends SurfaceView implements Runnable{
             updateGame();
             drawGame();
             controlFPS();
+            time++;
         }
 
     }
