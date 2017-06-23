@@ -22,7 +22,11 @@ import static android.R.attr.x;
 import static android.R.attr.y;
 import static com.strobertschs.finalprokect.finalproject.R.attr.height;
 import static com.strobertschs.finalprokect.finalproject.R.drawable.cntower2;
+import static com.strobertschs.finalprokect.finalproject.R.drawable.ice;
+import static com.strobertschs.finalprokect.finalproject.R.drawable.ice2;
+import static com.strobertschs.finalprokect.finalproject.R.drawable.northpole;
 import static com.strobertschs.finalprokect.finalproject.R.drawable.pausebutton;
+
 
 /**
  * Created by Santiago Neymar Jr on 18/06/2017.
@@ -35,8 +39,7 @@ class GameView extends SurfaceView implements Runnable{
 
 
     private Objects object; // the object; there's only 1, but it can change image and position to appear as many different objects
-    private Bitmap tower;
-    // the background image
+    Bitmap bitmap;
     protected ArrayList<Bitmap> objectImages; // list of object images
     //    private int numObjects;
     //    private Random random;
@@ -95,7 +98,8 @@ class GameView extends SurfaceView implements Runnable{
                 R.drawable.waterbottlenestle));
 */ //       numObjects = objectImages.size();
 
-        tower = BitmapFactory.decodeResource(res, cntower2);
+        res = getResources();
+        bitmap = BitmapFactory.decodeResource(res, ice2);
 
 
         water = new Water(Bitmap.createScaledBitmap(BitmapFactory.decodeResource(res,
@@ -163,7 +167,7 @@ class GameView extends SurfaceView implements Runnable{
         if (ourHolder.getSurface().isValid()) {
             canvas = ourHolder.lockCanvas();
             canvas.drawColor(0, PorterDuff.Mode.CLEAR); // clear the previous canvas before drawing new
-            canvas.drawBitmap(tower,(screenWidth - tower.getWidth())/2,0, null);
+            canvas.drawBitmap(bitmap, 0, 0, paint);
             paint.setColor(Color.argb(255, 255, 255, 255));
             paint.setTextSize(45);
             canvas.drawText("Points: " +points, 20, 50, paint);
