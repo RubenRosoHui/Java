@@ -52,6 +52,8 @@ class GameView extends SurfaceView implements Runnable{
     int waterHeight = 100; // starting water height
     int objectSize; // size of objects; this is used to make all object images the same size
     int points; //points counter for when the item is tapped
+    int time; //checks the amount of milliseconds since the game started
+
 
     public GameView(Context context, int sScreenWidth, int sScreenHeight){
         super(context);
