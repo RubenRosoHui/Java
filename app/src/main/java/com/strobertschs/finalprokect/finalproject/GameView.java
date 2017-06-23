@@ -79,6 +79,9 @@ class GameView extends SurfaceView implements Runnable{
         objectImages.add(Bitmap.createScaledBitmap(BitmapFactory.decodeResource(res,
                 R.drawable.waterbottlenestle),objectSize, objectSize, false));
 
+
+
+
         // all object images are stored in this list and scaled to the same size
 
  /*       objectImages.add(BitmapFactory.decodeResource(res,
@@ -102,8 +105,6 @@ class GameView extends SurfaceView implements Runnable{
         //(Bitmap.createScaledBitmap(BitmapFactory.decodeResource(res, R.drawable.water),screenWidth, screenHeight, false), screenHeight, waterHeight)
 
         object = new Objects(objectImages, water.getHeight(), screenWidth, screenHeight);
-
-
     }
 
     @Override

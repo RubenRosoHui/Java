@@ -37,6 +37,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(i);
                 break;
 
+            // if links is pressed, links page opens
+
             case R.id.buttonLinks:
                 Intent j;
                 j = new Intent(this, LinkActivity.class);
